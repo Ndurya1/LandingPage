@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maraga the 6th| landing page| campaign website</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        top: 0;
+       background: hsl(240, 91%, 5%);
+       color: white;
+       transition: transform 0.4s ease-in-out;
+    }
+    body:hover{
+        transform: translateY(-12px);
+    }
+    .logo{
+        font-size: 20 px;
+        font-weight: bold;
+        color: hsl(120, 73%, 75%);
+    }
+    .navmenu{
+        list-style: none;
+        display: flex;
+        gap: 1.8rem;
+        cursor: pointer;
+    }
+    .navmenu a:hover{
+         background:hsl(120, 73%, 75%) ;
+         color: hsl(240, 91%, 5%);
+         
+    }
+    .navmenu li a{
+        text-decoration: none;
+        color: white;
+        padding: 12px 7px;
+        border-radius: 5px;
+    }
+     .hamburger{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+   }
+    #bar{
+        height: 5px;
+        width: 40px;
+        background: white;
+        border-radius: 5px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: .4s ease;
+        left: 22px;
+    }
+    .header{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content:space-around;
+        align-items: center;
+        box-shadow: 2px 2px 7px grey;
+        position: static;
+    }
+    .hamburger{
+        display: none;
+    }
+    @media(max-width:750px) {
+      .hamburger{
+        display: block;
+      }   
+    
+   .hamburger #bar:nth-child(1){
+        top: 25%;
+    }
+   .hamburger #bar:nth-child(3){
+        top: 50%;
+    }
+   
+      .hamburger.active .bar:nth-child(1){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+   }
+   .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+   }
+   .hamburger.active .bar:nth-child(3){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+   }
+      .navmenu {
+    
+    position: fixed;
+    right: -100%;
+    top: 50px;
+    gap: 5px;
+    flex-direction: column;
+    background:  hsla(240, 92%, 5%, 0.37);
+    backdrop-filter: blur(12px);
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 7px grey;
+    transition: 0.3s ease;
+   }
+   .navmenu {
+    gap: 2.4rem;
+    padding: 14px 12px;
+    
+   }
+   .navmenu.active{
+    right: 0;
+   }
+
+}
+.text{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px;
+    line-height: 1.9rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text h1{
+  color: rgb(129, 238, 129);
+}
+.text p{
+    color: white;
+    font-size: 25px;
+
+}
+.cta{
+    gap: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cta button{
+    padding: 8px 18px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer
+    transition; transform: .3s ease;
+}
+.cta button:hover{
+   transform: translateY(5px);
+   box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.774);
+}
+.cta #btn1{
+  background-color: lightgreen;
+}
+.cta #btn2{
+    background-color: grey;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    width: auto;
+    height: 100vh;
+}
+.about{
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.3rem;
+    align-items: center;
+    margin: 10px;
+}
+.about img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px rgb(175, 170, 170);
+    object-fit: cover;
+  vertical-align: middle;
+
+}
+.description{
+  flex: 1;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
+.achievements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    object-fit: cover;
+    align-items: center;
+    border: 1px solid grey;
+    margin: 50px 40px;
+    width: 450px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px grey;
+}
+.achievements2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    object-fit: cover;
+    align-items: center;
+    border: 1px solid grey;
+    margin: 50px 40px;
+    width: 450px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px grey;
+    margin-left: 100px;
+}
+.support{
+ font-weight: bold;
+ margin: 9px ;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.support-btn{
+    margin: 9px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.support-btn button{
+    padding: 5px 5px;
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.support-btn button:hover{
+    transform: translateY(-8px);
+}
+.support-btn button:active{
+    background-color: grey;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    box-shadow: 0px 3px 12px grey;
+}
+   
+    
+
+
+   
+    
+</style>
+<body>
+   <div class="header">
+    <h1 class="logo">Maraga 2027</h1>
+    <div class="navbar">
+        <ul class="navmenu" id="menu">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WHY MARAGA</a></li>
+            <li><a href="#">ACHIEVEMENTS</a></li>
+            <li><a href="#">SUPPORT</a></li>
+        </ul>
+    </div>
+    <div class="hamburger" id="burger">
+        <span id="bar"></span>
+        <span id="bar"></span>
+        <span id="bar"></span>
+    </div>
+</div> 
+<div class="hero">
+    <div class="text">
+     <h1>Welcome to Dr. Maraga's campaign page!</h1>
+    <p>This website is a landing page of the official campaign website.<br/> it details more information about Dr. Maraga and why he's the best choice for 2027.<br/>All financial support is done on the official/main website.</p>
+    </div>
+   
+    <div class="cta">
+        <button id="btn1"><a href="https://www.davidmaraga.com">VIEW MAIN SITE</a></button>
+        
+    </div>
+</div>
+<div class="about">
+    <div class="description">
+        <h3>ABOUT DR. MARAGA,</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae sit reprehenderit, repudiandae corrupti, quidem perferendis atque, enim mollitia laboriosam architecto nisi veniam ut accusamus doloribus. Ab, sint fugiat. Minus.</p>
+    </div>
+    <div class="img"><img src="maraga.jpg"></div>
+</div>
+<div class="why-him">
+    <h2>WHY MARAGA?</h2>
+    <p>Dr Maraga was the previous chief justice of Kenya where we saw tremendous acts of heroism and patriotism. Famously known for setting a record for the first judge of the supreme court to nullify presidential elections, Dr Maraga has done alot more in the corridors of justice.<br/>
+    Let it be known that Dr Maraga is one of the few judges who never had any corruption scandal while serving at the courts for the long time he served.<br/>
+<b>so, why him?</b><br/>
+1.<b>Dr Maraga is honest</b><br/> 
+1.<b>Dr Maraga is corruption free</b><br/> </p>
+1.<b>Dr Maraga is visionary( you should see his plan)</b><br/> </p>
+1.<b>Dr Maraga is just</b><br/> </p>
+</div>
+<div class="achievements">
+    <img src="maraga.jpg" width="100px" height="90px">
+    <a href="https://kenyareports.com/is-maraga-the-saviour-that-kenya-needs/" target="_blank">Is Dr Maraga the saviour that Kenya needs?</a>
+</div>
+<div class="achievements2">
+    <a href="https://nation.africa/kenya/news/maraga-legacy-a-new-deal-for-judiciary-3226396" target="_blank">Maraga legacy; a new deal for judiciary</a>
+    <img src="maraga.jpg" width="100px" height="90px">
+</div>
+<div class="achievements">
+    <img src="maraga.jpg" width="100px" height="90px">
+    <a href=" https://judiciary.go.ke/commercial-justice-sector-reforms-project-launched/" >Commercial justice sector reforms</a>
+</div>
+<div class="achievements2">
+     <a href="https://nairobibusinessmonthly.com/sustaining-judiciary-transformation-agility-in-judicial-service-delivery-maragas-six-point-agenda/" target="_blank"> sustaining judiciary transformation</a>
+    <img src="maraga.jpg" width="100px" height="90px">
+</div>
+<h1 class="support">Support the campaign:</h1>
+<div class="support-btn"><button><a href="https://www.davidmaraga.com">SUPPORT</a></button></div>
+
+<div class="footer">
+    <p>copyright &COPY; 2025 maraga the 6th landing page</p>
+    <p>website developed and maintained by <a href="https://tinyurl.com/mucrnkr4">Dev Muhammad</a></p>
+</div>
+<script>
+const burger = document.querySelector('.hamburger');
+const menu = document.querySelector('.navmenu');
+burger.addEventListener('click', ()=>{
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+})
+
+document.querySelectorAll('.navmenu' ).forEach(n=> n.addEventListener("click", ()=>{
+    burger.classList.remove("active");
+    menu.classList.remove("active");
+
+}))
+
+
+</script>
+</body>
+</html>
